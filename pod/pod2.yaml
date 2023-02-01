@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: centos21
+  name: centos21
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: centos21
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: centos21
+    spec:
+      containers:
+      - image: centos:8
+        command: ["/bin/sleep", "3650d"]
+        name: centos21
+        resources: {}
+status: {}
+
